@@ -8,7 +8,7 @@
 import Foundation
 
 class MainLogic {
-    
+
     func getBillValue(billTextField: String) -> Float{
         var tmp: Float = 0.0
         if billTextField.isEmpty == true{
@@ -32,14 +32,17 @@ class MainLogic {
             return 0.0
         }
     }
+
     func selectedSplit (stepperValue: Double) -> Float {
-        var tmpSplit: Float = Float(stepperValue)
+        let tmpSplit: Float = Float(stepperValue)
         return tmpSplit
     }
-    
+
     func calculate(billValue: Float, tipValue: Float, splitValue: Float) -> Float {
-        let result  = (billValue + (billValue / 100 * tipValue)) / splitValue
+        print("bill - \(billValue)")
+        print("tip - \(tipValue)")
+        print("split - \(splitValue)")
+        let result  = (billValue + ((billValue / 100) * tipValue)) / splitValue
         return result
     }
-    
 }

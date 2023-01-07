@@ -8,14 +8,13 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var selectTipControl: UISegmentedControl!
     @IBOutlet weak var chooseSplitStepper: UIStepper!
     @IBOutlet weak var chooseSplitNumber: UILabel!
     @IBOutlet weak var calculateButton: UIButton!
-    
 
     var logic = MainLogic()
     var value = Value()
@@ -31,7 +30,7 @@ class ViewController: UIViewController {
         value.result = logic.calculate(billValue: value.bill!, tipValue: value.tip!, splitValue: value.split)
         self.performSegue(withIdentifier: "goToSecond", sender: self)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToSecond"{
             let destinationVC = segue.destination as! SecondViewController
@@ -39,8 +38,13 @@ class ViewController: UIViewController {
         }
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.billTextField.delegate = self
         // Do any additional setup after loading the view.
     }
 }

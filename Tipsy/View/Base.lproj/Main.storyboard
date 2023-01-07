@@ -37,7 +37,7 @@
                                                             <constraint firstAttribute="height" constant="60" id="IFH-ph-WfP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -83,8 +83,8 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="NFU-e1-kob">
                                                         <rect key="frame" x="0.0" y="46" width="333" height="42"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js7-Cy-55D">
-                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="42"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js7-Cy-55D">
+                                                                <rect key="frame" x="0.0" y="0.0" width="21.666666666666668" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="0.036081794649999999" green="0.69042503830000002" blue="0.41978269820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
