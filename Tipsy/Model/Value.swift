@@ -8,8 +8,8 @@
 import Foundation
 
 struct Value {
-    var billValue: Float?
-    var tipValue: Float?
-    var splitValut: Float = 0.0
+    var bill: Float?
+    var tip: Float?
+    var split: Float = 0.0
     var result: Float?
 }

@@ -8,8 +8,38 @@
 import Foundation
 
 class MainLogic {
-    var billValue: Value?
     
+    func getBillValue(billTextField: String) -> Float{
+        var tmp: Float = 0.0
+        if billTextField.isEmpty == true{
+            tmp = 0.0
+            //please enter something
+        }else{
+            tmp = Float(billTextField)!
+        }
+        return tmp
+    }
+
+    func selectedTip(index: Int) -> Float {
+        switch index{
+            case 0:
+                return 0.0
+            case 1:
+                return 10.0
+            case 2:
+                return 20.0
+        default:
+            return 0.0
+        }
+    }
+    func selectedSplit (stepperValue: Double) -> Float {
+        var tmpSplit: Float = Float(stepperValue)
+        return tmpSplit
+    }
     
+    func calculate(billValue: Float, tipValue: Float, splitValue: Float) -> Float {
+        let result  = (billValue + (billValue / 100 * tipValue)) / splitValue
+        return result
+    }
     
 }

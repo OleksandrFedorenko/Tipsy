@@ -16,60 +16,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var chooseSplitNumber: UILabel!
     @IBOutlet weak var calculateButton: UIButton!
     
-    var billValue: Float?
-    var tipValue: Float?
-    var splitValue: Float = 0.0
-    var result: Float?
 
     var logic = MainLogic()
-    
-    func getBillValue(){
-        if billTextField.text?.isEmpty == true{
-            billValue = 0.0
-            //please enter something
-        }else{
-            billValue = Float(billTextField.text!)
-        }
-    }
-    func selectedTip() -> Float {
-        switch selectTipControl.selectedSegmentIndex{
-            case 0:
-                return 0.0
-            case 1:
-                return 10.0
-            case 2:
-                return 20.0
-        default:
-            return 0
-        }
-    }
-    func selectedSplit () -> Float {
-        return Float(chooseSplitStepper.value)
-    }
-    
-    func calculate(billValue: Float, tipValue: Float, splitValue: Float) -> Float {
-        let result  = (billValue + (billValue / 100 * tipValue)) / splitValue
-        return result
-    }
+    var value = Value()
 
     @IBAction func valueChangedStepper(_ sender: UIStepper) {
         chooseSplitNumber.text = String(format: "%.f", chooseSplitStepper.value)
     }
-    
+
     @IBAction func calculateBill(_ sender: UIButton) {
-        getBillValue()
-        tipValue = selectedTip()
-        splitValue = selectedSplit()
-        result = calculate(billValue: billValue!, tipValue: tipValue!, splitValue: splitValue)
+        value.bill = logic.getBillValue(billTextField: billTextField.text!)
+        value.tip = logic.selectedTip(index: selectTipControl.selectedSegmentIndex)
+        value.split = logic.selectedSplit(stepperValue: chooseSplitStepper.value)
+        value.result = logic.calculate(billValue: value.bill!, tipValue: value.tip!, splitValue: value.split)
         self.performSegue(withIdentifier: "goToSecond", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToSecond"{
             let destinationVC = segue.destination as! SecondViewController
-            destinationVC.result = String(result!)
+            destinationVC.result = value.result
         }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

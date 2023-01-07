@@ -11,11 +11,11 @@ import Foundation
 class SecondViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
-    var result: String?
+    var result: Float?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultLabel.text = result
+        resultLabel.text = String(result!)
         // Do any additional setup after loading the view.
     }
     
