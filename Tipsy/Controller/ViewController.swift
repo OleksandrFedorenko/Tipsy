@@ -18,11 +18,19 @@ class ViewController: UIViewController {
     
     var billValue: Float?
     var tipValue: Float?
-    var splitValue: Float?
+    var splitValue: Float = 0.0
     var result: Float?
 
     
-
+    
+    func getBillValue(){
+        if billTextField.text?.isEmpty == true{
+            billValue = 0.0
+            //please enter something
+        }else{
+            billValue = Float(billTextField.text!)
+        }
+    }
     func selectedTip() -> Float {
         switch selectTipControl.selectedSegmentIndex{
             case 0:
@@ -49,11 +57,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateBill(_ sender: UIButton) {
-        billValue = Float(billTextField.text!)
+        getBillValue()
         tipValue = selectedTip()
         splitValue = selectedSplit()
-        result = calculate(billValue: billValue!, tipValue: tipValue!, splitValue: splitValue!)
-        print(result)
+        result = calculate(billValue: billValue!, tipValue: tipValue!, splitValue: splitValue)
+        self.performSegue(withIdentifier: "goToSecond", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToSecond"{
+            let destinationVC = segue.destination as! SecondViewController
+            destinationVC.result = String(result!)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
