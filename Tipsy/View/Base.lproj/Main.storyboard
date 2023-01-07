@@ -167,11 +167,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ci9-XE-9gP" userLabel="ViewTop">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="322"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zsN-bl-Eyg">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zsN-bl-Eyg">
                                                 <rect key="frame" x="109.00000000000001" y="95.333333333333329" width="175.33333333333337" height="131.66666666666669"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2l-YN-wP6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="30"/>
+                                                        <rect key="frame" x="1.6666666666666714" y="0.0" width="172" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" red="0.58823531870000001" green="0.60392159219999997" blue="0.60000002379999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
