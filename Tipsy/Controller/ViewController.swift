@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     var splitValue: Float = 0.0
     var result: Float?
 
-    
+    var logic = MainLogic()
     
     func getBillValue(){
         if billTextField.text?.isEmpty == true{

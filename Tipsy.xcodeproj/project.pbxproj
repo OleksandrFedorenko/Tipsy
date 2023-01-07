@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		400F15632969BD810057C496 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F15622969BD810057C496 /* Value.swift */; };
+		400F15652969BF9A0057C496 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F15642969BF9A0057C496 /* Logic.swift */; };
 		406F0086296835860097F490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406F0085296835860097F490 /* AppDelegate.swift */; };
 		406F0088296835860097F490 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406F0087296835860097F490 /* SceneDelegate.swift */; };
 		406F008A296835860097F490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406F0089296835860097F490 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		400F15622969BD810057C496 /* Value.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		400F15642969BF9A0057C496 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		406F0082296835860097F490 /* Tipsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406F0085296835860097F490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		406F0087296835860097F490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +54,8 @@
 		400F15602969B7980057C496 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				400F15622969BD810057C496 /* Value.swift */,
+				400F15642969BF9A0057C496 /* Logic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 			files = (
 				40921F6D296888A800B4F660 /* SecondViewController.swift in Sources */,
 				406F008A296835860097F490 /* ViewController.swift in Sources */,
+				400F15632969BD810057C496 /* Value.swift in Sources */,
 				406F0086296835860097F490 /* AppDelegate.swift in Sources */,
+				400F15652969BF9A0057C496 /* Logic.swift in Sources */,
 				406F0088296835860097F490 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
