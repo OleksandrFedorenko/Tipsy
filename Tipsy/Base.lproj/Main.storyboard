@@ -37,7 +37,7 @@
                                                             <constraint firstAttribute="height" constant="60" id="IFH-ph-WfP"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="70"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -83,8 +83,8 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="NFU-e1-kob">
                                                         <rect key="frame" x="0.0" y="46" width="333" height="42"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js7-Cy-55D">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20.333333333333332" height="42"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="js7-Cy-55D">
+                                                                <rect key="frame" x="0.0" y="0.0" width="21.666666666666668" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                                 <color key="textColor" red="0.036081794649999999" green="0.69042503830000002" blue="0.41978269820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -92,6 +92,9 @@
                                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="S2J-OI-iCO">
                                                                 <rect key="frame" x="239" y="5" width="94" height="32"/>
                                                                 <color key="tintColor" red="0.58516603710000004" green="0.60330891610000004" blue="0.5987982154" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <connections>
+                                                                    <action selector="valueChangedStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="1mY-Ef-qFB"/>
+                                                                </connections>
                                                             </stepper>
                                                         </subviews>
                                                     </stackView>
@@ -106,7 +109,8 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="mug-Kf-KZ0" kind="presentation" identifier="goToSecondView" id="8ta-1b-Ooc"/>
+                                                    <action selector="calculateBill:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCg-Sb-bYi"/>
+                                                    <segue destination="mug-Kf-KZ0" kind="presentation" id="9LR-gr-Mcs"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -137,6 +141,13 @@
                             <constraint firstItem="Z6L-IU-4fb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ers-rg-C3O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="BiB-hv-Oa4" id="WiF-K9-azy"/>
+                        <outlet property="calculateButton" destination="FXV-Ra-bmh" id="atZ-NJ-NPv"/>
+                        <outlet property="chooseSplitNumber" destination="js7-Cy-55D" id="eQ4-or-WYv"/>
+                        <outlet property="chooseSplitStepper" destination="S2J-OI-iCO" id="3vy-dD-ZrL"/>
+                        <outlet property="selectTipControl" destination="A9V-r6-TiU" id="JCp-pb-o0M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +168,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="322"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zsN-bl-Eyg">
-                                                <rect key="frame" x="109" y="95.333333333333329" width="175.33333333333337" height="131.66666666666669"/>
+                                                <rect key="frame" x="109.00000000000001" y="94.999999999999986" width="175.33333333333337" height="131.66666666666663"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2l-YN-wP6">
                                                         <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="30"/>
