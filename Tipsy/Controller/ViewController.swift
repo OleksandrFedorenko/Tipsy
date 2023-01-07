@@ -31,20 +31,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.performSegue(withIdentifier: "goToSecond", sender: self)
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.billTextField.delegate = self
+        // Do any additional setup after loading the view.
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToSecond"{
             let destinationVC = segue.destination as! SecondViewController
-            destinationVC.result = value.result
+            destinationVC.result = value
         }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.billTextField.delegate = self
-        // Do any additional setup after loading the view.
     }
 }

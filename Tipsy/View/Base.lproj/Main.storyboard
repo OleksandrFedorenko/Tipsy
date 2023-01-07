@@ -168,7 +168,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="322"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="zsN-bl-Eyg">
-                                                <rect key="frame" x="109.00000000000001" y="94.999999999999986" width="175.33333333333337" height="131.66666666666663"/>
+                                                <rect key="frame" x="109.00000000000001" y="95.333333333333329" width="175.33333333333337" height="131.66666666666669"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2l-YN-wP6">
                                                         <rect key="frame" x="0.0" y="0.0" width="175.33333333333334" height="30"/>
@@ -207,7 +207,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4a-xx-Zft">
-                                                <rect key="frame" x="3" y="35" width="387" height="60"/>
+                                                <rect key="frame" x="20" y="35" width="353" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="rKT-Fz-gtU"/>
                                                 </constraints>
@@ -218,11 +218,12 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="f4a-xx-Zft" firstAttribute="centerX" secondItem="Zfi-oL-lF5" secondAttribute="centerX" id="MCX-ho-83o"/>
+                                            <constraint firstAttribute="trailing" secondItem="f4a-xx-Zft" secondAttribute="trailing" constant="20" id="Jba-XZ-OH6"/>
                                             <constraint firstItem="UgO-iD-NtX" firstAttribute="leading" secondItem="Zfi-oL-lF5" secondAttribute="leading" constant="20" id="kyA-R7-ImO"/>
                                             <constraint firstAttribute="trailing" secondItem="UgO-iD-NtX" secondAttribute="trailing" constant="20" id="mnK-D6-lVO"/>
                                             <constraint firstItem="f4a-xx-Zft" firstAttribute="top" secondItem="Zfi-oL-lF5" secondAttribute="top" constant="35" id="srj-xC-aJ7"/>
                                             <constraint firstAttribute="bottom" secondItem="UgO-iD-NtX" secondAttribute="bottom" constant="25" id="u4G-vv-jGG"/>
+                                            <constraint firstItem="f4a-xx-Zft" firstAttribute="leading" secondItem="Zfi-oL-lF5" secondAttribute="leading" constant="20" id="yv0-z1-4qN"/>
                                         </constraints>
                                     </view>
                                 </subviews>

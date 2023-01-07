@@ -11,16 +11,16 @@ import Foundation
 class SecondViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
-    var result: Float?
-    
+    var result = Value()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        resultLabel.text = String(result!)
+        let tmp1 = Int(result.split)
+        let tmp2 = Int(result.tip!)
+        resultLabel.text = String(result.result!)
+        explainLabel.text = "Split between \(tmp1) people, with \(tmp2)% tip"
         // Do any additional setup after loading the view.
     }
-    
-    
-    
     @IBAction func recalculateButton(_ sender: UIButton) {
         dismiss(animated: true)
     }
